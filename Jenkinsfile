@@ -1,10 +1,9 @@
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'maven:3.8.6-openjdk-11-slim' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Hello') {
             steps {
-                sh 'mvn --version'
+                echo 'Hello World'
             }
         }
     }
